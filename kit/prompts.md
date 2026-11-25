@@ -45,7 +45,35 @@ Follow AGENTS.md in the roblox-game-design repository.
 
 My [stat] is [value]. [Anything known about where players leave.]
 
-Use foundations/14-metrics-and-diagnosis.md to find the stage and the likely cause. Check the cause against what the game does at that moment: [describe the first minutes, or attach the script]. Propose one change, with the number you expect and how many players I need before I can trust the result.
+Use foundations/14-metrics-and-diagnosis.md to find the stage and the likely cause. Check the cause against what the game does at that moment: [describe the first minutes, or attach the script]. Propose one change, with the number you expect, and run tools/funnel.py --size to tell me how many players and days I need before I can trust the result. I get about [number] new players a day.
+```
+
+## Turn my stats into a plan
+
+```
+Follow AGENTS.md in the roblox-game-design repository, the procedure for "here are my stats".
+
+Game: [name and link]. Closest live game: [name].
+My numbers, in the shape of kit/templates/stats-intake.md: [paste the filled intake, or attach dashboard exports and screenshots].
+What happened in that date range: [updates, ad campaigns, events].
+What I can show you of the game: [a recording of a new player's first five minutes on a phone / the first-session script / access in Studio].
+
+Write the numbers as JSON, run tools/funnel.py on it and show me its report. Then follow kit/stats-to-plan.md step by step. Tell me which stage comes first and why, how much of each gap is ad traffic or one device, what is on screen at the moment players leave, and which kind of fix it needs. Give me at most three hypotheses, each with the number now, the number you expect, and how many days until I can read it. Choose one.
+
+If you could not watch the moment, say "cause not known" and tell me what to record or which three events to log. Do not guess a cause from the numbers alone.
+```
+
+## Brief a screen for a designer or for Drip
+
+```
+Follow AGENTS.md in the roblox-game-design repository. Fill kit/templates/screen-brief.md.
+
+The fix we chose: [paste the hypothesis from the stats report].
+The screen as it is now: [screenshots or a recording at that moment, on a phone].
+The live game whose version of this screen works: [name, with a screenshot].
+What must not change: [prices, the loop, the art style, other screens].
+
+Fill all nine sections. Leave a line empty before you guess it, and list the empty lines at the end. Write the job of the screen as one sentence with a time, an action and a word count. Write both checks of section 9 before any design work. Then give me the brief mapped onto Drip's fields, ready to start a Drip task with, and the three sentences to say to Drip about style, frame size and which check wins.
 ```
 
 ## Make a trend game

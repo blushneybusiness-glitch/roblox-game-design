@@ -53,7 +53,7 @@ Add rows wherever more than 20 seconds pass without one.
 
 ## Funnel events
 
-Log one event for each row above, with a fixed step number that never changes, so the dashboard shows where players leave. Name the events here before building.
+Log one event for each row above, numbered in the order players do the steps, so the dashboard shows where players leave. Roblox counts a skipped step as done, so a step added later takes the number of its place and the steps after it move up; read the funnel from the day of that change ([foundations/14-metrics-and-diagnosis.md](../../foundations/14-metrics-and-diagnosis.md)). Name the events here before building.
 
 | Step | Event name | Row it marks |
 |---|---|---|

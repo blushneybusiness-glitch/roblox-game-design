@@ -43,7 +43,7 @@ The D7 and D30 charts stay empty for the latest 7 and 30 days ([Retention docs](
 
 ### Reading the first-session retention chart
 
-The chart shows the share of new players still in the game each minute after joining; Roblox's example uses a 5-minute checkpoint ([Engagement docs](https://create.roblox.com/docs/production/analytics/engagement)). Another read of the analytics docs found no metric named "first session", so check the name in your dashboard. The circulating 95% / 87% / 65% at 30 s / 1 min / 5 min yardstick has no written source ([05-first-session.md](05-first-session.md)). Roblox's advice: instrument every first-session step and fix the largest drop-off ([Retention docs](https://create.roblox.com/docs/en-us/production/analytics/retention.md)).
+Roblox calls it the New User First Session Retention chart. It shows the share of new players still playing a given number of minutes after their first join, with the previous period drawn next to the current one, and Roblox's example reads the 5-minute point week on week ([Engagement docs](https://create.roblox.com/docs/production/analytics/engagement)). The circulating 95% / 87% / 65% at 30 s / 1 min / 5 min yardstick has no written source ([05-first-session.md](05-first-session.md)). Roblox's advice: instrument every first-session step and fix the largest drop-off ([Retention docs](https://create.roblox.com/docs/en-us/production/analytics/retention.md)).
 
 Find the minute with the steepest fall. On a fresh account on a phone, play with a stopwatch to that minute and write down what is on screen, what the player was just given and what they are asked to do. One public case: a mining game lost about 30% of players in the first minute and half within 2 minutes; replies blamed a cluttered HUD and mines too small to find. No after-data was posted ([DevForum](https://devforum.roblox.com/t/my-day-1-retention-is-awful-23-losing-half-my-players-in-under-2-minutes-what-am-i-doing-wrong-with-onboarding/4186434)).
 
@@ -126,15 +126,17 @@ Find the earliest stage where you are below the 50th percentile band, then the r
 | 5,000 | 0.8 | 1.4 | 1.2 |
 | 20,000 | 0.4 | 0.7 | 0.6 |
 
-So a 10% D1 measured on 1,000 new players is really somewhere between about 8.1% and 11.9%. Telling 10% from 12% needs about 1,900 players per version to reach 95% confidence half the time, and about 3,800 per version to catch the gap 4 times in 5. **Our read:** at 300 new players a day, a 2-point D1 test takes about two weeks. Small games should test big changes, or first-session steps, where rates sit near 50% and results arrive on day one. Roblox Experiments runs real A/B splits ([analytics essentials](https://create.roblox.com/docs/en-us/production/game-design/analytics-essentials)); before-and-after comparisons mix in the weekday and the traffic source. Staff say thumbnail personalization results may mean nothing under about 1,000 daily users ([DevForum](https://devforum.roblox.com/t/live-now-personalize-your-thumbnails-to-attract-more-users/3257233)).
+So a 10% D1 measured on 1,000 new players is really somewhere between about 8.1% and 11.9%. Telling 10% from 12% needs about 1,900 players per version to reach 95% confidence half the time, and about 3,800 per version to catch the gap 4 times in 5. **Our read:** at 300 new players a day, a 2-point D1 test takes about two weeks. Small games should test big changes, or first-session steps, where rates sit near 50% and results arrive on day one. Roblox Experiments runs real A/B splits ([analytics essentials](https://create.roblox.com/docs/en-us/production/game-design/analytics-essentials)): one or two variants of a config value against a control, for 14 to 60 days, tracking day 1 and day 7 retention, playtime, session time and spending, with a funnel step as the goal if you choose one. Roblox shows the minimum detectable effect before the start and says games under 1,000 daily users may not get useful data ([Experiments docs](https://create.roblox.com/docs/en-us/production/experiments)). Before-and-after comparisons mix in the weekday and the traffic source. The routine for both is in [kit/stats-to-plan.md](../kit/stats-to-plan.md), step 7. Staff say thumbnail personalization results may mean nothing under about 1,000 daily users ([DevForum](https://devforum.roblox.com/t/live-now-personalize-your-thumbnails-to-attract-more-users/3257233)).
 
 ## Instrumenting
 
 - **Funnel events.** Roblox offers one-time funnels (`LogOnboardingFunnelStepEvent`) and recurring ones (`LogFunnelStepEvent`), up to 10 funnel tabs, server-side only, in published games. A skipped step counts the earlier steps as complete ([Funnel docs](https://create.roblox.com/docs/en-us/production/analytics/funnel-events)).
-- **One event per row** of [kit/templates/first-session-script.md](../kit/templates/first-session-script.md), numbered in script order. Never renumber: a new step takes the next free number, so old and new charts stay comparable.
+- **One event per row** of [kit/templates/first-session-script.md](../kit/templates/first-session-script.md), numbered in the order players do them. Because a skipped step counts the earlier steps as complete, a step added in the middle takes the number of its place and the steps after it move up. A mid-flow step given the last number would mark every earlier step done. Note the date of the change and read the funnel from that date; the dashboard shows a warning when a date range crosses a step change ([Funnel docs](https://create.roblox.com/docs/en-us/production/analytics/funnel-events)).
+- **A zoom funnel** when one step loses the most players: three extra steps between it and the step before, logged as a funnel of its own, to tell "did not find it" from "had to wait" from "tried and failed" ([kit/stats-to-plan.md](../kit/stats-to-plan.md), step 4).
 - **A recurring funnel** for the daily loop: join, collect, first purchase of the session, clock check.
 - **Slice by traffic source.** Acquisition splits Home recommendations, Continue Play, Today's Picks, Friends, Search, Teleport and sponsored ([Acquisition docs](https://create.roblox.com/docs/production/analytics/acquisition)).
-- **Slice by device.** Whether funnel and retention charts split by device is not known. The performance dashboard shows crash rate and memory by device ([Performance docs](https://create.roblox.com/docs/en-us/production/analytics/performance)); read it next to the funnel.
+- **Slice by device.** The Filter By menu has Platform (computer, phone, tablet, console, VR) and OS. A filter applies to every chart on every analytics page until you turn it off, and a chart that cannot use it greys it out ([Analytics dashboard](https://create.roblox.com/docs/en-us/production/analytics/analytics-dashboard)). A funnel filter looks at the device a player had at the funnel's first step ([Funnel docs](https://create.roblox.com/docs/en-us/production/analytics/funnel-events)). The performance dashboard shows frame rate, crash rate, out-of-memory exits and memory by device ([Performance docs](https://create.roblox.com/docs/en-us/production/analytics/performance)); read it next to the funnel.
+- **Read by join day.** The Retention page ends with a table of each join day's return over its first 10 days and each join week's over 10 weeks, with playtime, payer conversion and revenue per user ([Retention docs](https://create.roblox.com/docs/en-us/production/analytics/retention)). It is the cleanest way to set the days before an update against the days after.
 - **Log the long milestones** (first rebirth, day 10) as badges, so your funnel compares with the table above.
 
 ## The rules
@@ -149,6 +151,8 @@ So a 10% D1 measured on 1,000 new players is really somewhere between about 8.1%
 
 ## How to do it
 
+`python tools/funnel.py <stats.json>` does steps 1 and 2 from a file of your numbers and adds what your traffic can prove. [kit/templates/stats-intake.md](../kit/templates/stats-intake.md) says where each number is in the dashboard, and [kit/stats-to-plan.md](../kit/stats-to-plan.md) is the full routine with a worked example.
+
 1. Fill the funnel table with your numbers and your dashboard band; circle the earliest stage below the 50th percentile.
 2. Find its row in the diagnosis table and play to the minute or step it names.
 3. Pull two competitors' badge funnels and compare their first milestone with yours.
@@ -157,7 +161,7 @@ So a 10% D1 measured on 1,000 new players is really somewhere between about 8.1%
 ## Checks
 
 - [ ] The funnel table is filled for every stage, with the dashboard band next to each number.
-- [ ] Every row of the first-session script has a funnel event with a fixed step number.
+- [ ] Every row of the first-session script has a funnel event, numbered in the order players do the steps.
 - [ ] Retention is read per traffic source.
 - [ ] The update plan has one stat, an expected number and a read date at least 7 days after release.
 - [ ] Each version in a test has at least 1,000 new players, or the expected gap is 3 points or more.
@@ -171,7 +175,7 @@ So a 10% D1 measured on 1,000 new players is really somewhere between about 8.1%
 | A change "worked", then the number went back | Saturday read against a Tuesday, or 300 players | Compare 7 full days; check the testing table |
 | A competitor's step is over 100% | Badge added after launch | Use badges created with the base |
 | The D7 chart shows a fresh collapse | The latest 7 days are not filled yet | Ignore the last 7 days of D7, the last 30 of D30 |
-| Funnel charts break after a new step | Steps renumbered | New steps take new numbers |
+| Funnel charts break after a new step | The new step sits mid-flow with the last number, or the date range crosses the change | Number steps in play order; read from the day of the change |
 | Revenue work while D1 is under the band | Wrong stage | Fix the earliest weak stage first |
 
 ## Sources

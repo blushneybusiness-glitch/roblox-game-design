@@ -32,7 +32,7 @@ Read [foundations/01-why-designs-fail.md](foundations/01-why-designs-fail.md) on
 
 ### "Review my game", "audit this", "why is nobody staying?"
 
-1. Ask for, or find, the material listed at the top of [kit/design-audit.md](kit/design-audit.md). For a live game the funnel and the first-session retention chart matter most.
+1. Ask for, or find, the material listed at the top of [kit/design-audit.md](kit/design-audit.md). For a live game the funnel and the first-session retention chart matter most; [kit/templates/stats-intake.md](kit/templates/stats-intake.md) lists every number and where it lives in the dashboard.
 2. Run the audit. Use the genre playbook's numbers where it gives its own.
 3. Return the report in the audit's format: verdict, failed gates, scores with evidence, five fixes as hypotheses, and what you could not judge.
 
@@ -40,7 +40,18 @@ Read [foundations/01-why-designs-fail.md](foundations/01-why-designs-fail.md) on
 
 1. Open [foundations/14-metrics-and-diagnosis.md](foundations/14-metrics-and-diagnosis.md). Find the stage of the funnel the number belongs to.
 2. Use its diagnosis table to pick the likely cause. Confirm it against what the game does at that moment: play to that minute or read the script.
-3. Propose one change, as a hypothesis with an expected number, and the page that explains it.
+3. Propose one change, as a hypothesis with an expected number, and the page that explains it. `python tools/funnel.py --size <now> <expected> --per-day <new players>` says how many players and days the test needs.
+
+If the user has more than one number, use the next procedure instead.
+
+### "Here are my stats", "what should I fix first?", "improve my numbers"
+
+1. Get the numbers in the shape of [kit/templates/stats-intake.md](kit/templates/stats-intake.md). If the first-session curve and the step funnel are both missing, say that the first job is the funnel events, and offer a design audit in the meantime.
+2. Write the numbers as JSON and run `python tools/funnel.py <file>`. It names the weak stage, the window, the step, how much of a gap is ad traffic or one device, and the smallest change the game's traffic can prove.
+3. Follow [kit/stats-to-plan.md](kit/stats-to-plan.md) from step 2. Do not skip step 3: the tool finds where players leave, and only watching that moment says why. If you cannot watch the game, say so and ask for a recording or the watch notes.
+4. Name the kind of fix before proposing one: world, screen, numbers, rules, content, packaging or device. One kind per update.
+5. Return the report in that page's format: at most three hypotheses, one chosen, each with the number now, the number expected, and how many days until it can be read.
+6. Hand the chosen fix on in its own document. A screen goes out as a filled [kit/templates/screen-brief.md](kit/templates/screen-brief.md), which maps onto the brief a UI design process such as Drip takes. A number goes out as a pacing JSON checked with `tools/pacing.py`. Anything else goes out as a row in the update plan.
 
 ### "Make it more addicting", "make it stickier"
 
@@ -111,9 +122,11 @@ If the user cannot answer the fourth, the first job is the funnel events, not a 
 | [teardowns/](teardowns/README.md) | How individual hits work, in numbers |
 | [kit/design-audit.md](kit/design-audit.md) | The gates, the score, the report format |
 | [kit/nothing-detector.md](kit/nothing-detector.md) | The test that removes empty advice |
-| [kit/templates/](kit/templates/) | The documents a design consists of |
+| [kit/stats-to-plan.md](kit/stats-to-plan.md) | From a live game's numbers to one change that can be read |
+| [kit/templates/](kit/templates/) | The documents a design consists of, the stats intake and the screen brief |
 | [kit/prompts.md](kit/prompts.md) | Prompts for a person to paste |
 | [tools/pacing.py](tools/pacing.py) | Checks a price ladder's timing |
+| [tools/funnel.py](tools/funnel.py) | Reads a stats file: weak stage, matched symptoms, what the traffic can prove |
 | [tools/snapshot.py](tools/snapshot.py), [tools/analyze.py](tools/analyze.py) | Re-pull and re-analyse the public chart data |
 | [data/](data/README.md) | The chart snapshot: games, passes, products, badges |
 | [research/](research/README.md) | How this was researched, and its limits |

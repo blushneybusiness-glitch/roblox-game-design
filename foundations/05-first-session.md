@@ -89,7 +89,7 @@ The values in the first column match what the collect-and-earn hits do. The othe
 2. **Mark the gates** on the script and compare them with the table above.
 3. **Build it in grey boxes** before anything else exists.
 4. **Watch a stranger play it** on a phone. Say nothing. Run a stopwatch. Write the measured time next to each gate. Repeat with five more people. Children if the game is for children.
-5. **Log one funnel event per row** of the script, with a step number that never changes.
+5. **Log one funnel event per row** of the script, numbered in the order players do the steps.
 6. **Launch small and read the chart.** On the first-session retention chart, find the minute with the steepest fall. Open the game, play to that minute, and look at what is on screen.
 7. **Change one thing** in that minute. Ship. Read again after the data window. Repeat. Expect to do this many times; the first version of a first session is never the one that works.
 

@@ -34,6 +34,11 @@ The handbook was researched and written with Claude, Anthropic's AI model, in th
 - **"Our arithmetic"** is a calculation on sourced numbers: a payback time, a ratio, an expected value. The inputs are on the page so it can be redone.
 - **Results from `tools/pacing.py`** are simulations of an ideal player. They are lower bounds on time, not measurements of real players.
 - **"Start with"** values are proposals. Nobody has shipped a game on them.
+- **Results from `tools/funnel.py`** are arithmetic on the numbers you give it: shares, differences, and the standard formula for how many players a test of two rates needs. The rows it matches are the symptoms of [foundations/14](../foundations/14-metrics-and-diagnosis.md) turned into thresholds. Where the page's wording was loose ("cluster", "steady, then a drop"), the threshold is our reading.
+
+## What was added after the first version
+
+The stats intake, [kit/stats-to-plan.md](../kit/stats-to-plan.md), the screen brief and `tools/funnel.py` were added on the same day. Their facts about the dashboard, funnels, configs and Experiments come from Roblox's Creator Docs, read page by page on 25 November 2026. That reading also corrected two things in [foundations/14](../foundations/14-metrics-and-diagnosis.md): how funnel steps must be numbered, and that charts can be filtered by device. The routine has not been run on a live game's dashboard yet, and its examples are invented and say so.
 
 ## What it could not find
 

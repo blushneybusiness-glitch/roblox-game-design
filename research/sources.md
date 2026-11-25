@@ -1,6 +1,6 @@
 # Sources
 
-Every external address cited anywhere in the handbook: 1038 addresses on 197 sites, grouped by site, with the
+Every external address cited anywhere in the handbook: 1050 addresses on 199 sites, grouped by site, with the
 pages that cite each. Built by `python tools/build_index.py`. All were read in November 2026.
 
 ## games.roblox.com (78)
@@ -162,24 +162,30 @@ pages that cite each. Built by `python tools/build_index.py`. All were read in N
 - <https://apis.roblox.com/search-api/omni-search?searchQuery=Huss+Valley&sessionId=abc&pageType=all> (cited in genres/party-and-minigames.md)
 - <https://apis.roblox.com/search-api/omni-search?searchQuery=Sol%27s%20RNG&sessionId=11111111-2222-3333-4444-555555555555&pageType=all> (cited in genres/rng.md)
 
-## create.roblox.com (58)
+## create.roblox.com (68)
 
 - <https://create.roblox.com/docs/discovery> (cited in foundations/02-the-platform.md, foundations/11-clips-and-packaging.md)
 - <https://create.roblox.com/docs/discovery-faq> (cited in foundations/02-the-platform.md, foundations/08-retention.md, foundations/09-other-players.md, foundations/11-clips-and-packaging.md and 1 more)
 - <https://create.roblox.com/docs/discovery-faq.md> (cited in foundations/03-idea-and-reference.md, foundations/14-metrics-and-diagnosis.md)
 - <https://create.roblox.com/docs/en-us/chat/guidelines> (cited in foundations/02-the-platform.md, foundations/09-other-players.md, foundations/15-the-line.md)
 - <https://create.roblox.com/docs/en-us/chat/voice-chat> (cited in foundations/02-the-platform.md, foundations/09-other-players.md, foundations/15-the-line.md)
+- <https://create.roblox.com/docs/en-us/input/mobile> (cited in kit/templates/screen-brief.md)
 - <https://create.roblox.com/docs/en-us/marketplace/marketplace-fees-and-commissions> (cited in genres/hangout.md)
 - <https://create.roblox.com/docs/en-us/matchmaking/customize-matchmaking> (cited in foundations/02-the-platform.md, foundations/09-other-players.md)
 - <https://create.roblox.com/docs/en-us/matchmaking/scoring> (cited in foundations/02-the-platform.md, foundations/08-retention.md, foundations/09-other-players.md)
 - <https://create.roblox.com/docs/en-us/performance-optimization/design> (cited in foundations/10-feel-and-feedback.md)
 - <https://create.roblox.com/docs/en-us/performance-optimization/test-on-hardware> (cited in foundations/10-feel-and-feedback.md)
-- <https://create.roblox.com/docs/en-us/production/analytics/analytics-dashboard> (cited in foundations/02-the-platform.md, foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md)
-- <https://create.roblox.com/docs/en-us/production/analytics/economy-events> (cited in foundations/14-metrics-and-diagnosis.md)
-- <https://create.roblox.com/docs/en-us/production/analytics/funnel-events> (cited in foundations/02-the-platform.md, foundations/08-retention.md, foundations/14-metrics-and-diagnosis.md)
-- <https://create.roblox.com/docs/en-us/production/analytics/performance> (cited in foundations/10-feel-and-feedback.md, foundations/14-metrics-and-diagnosis.md)
-- <https://create.roblox.com/docs/en-us/production/analytics/retention> (cited in foundations/02-the-platform.md, foundations/08-retention.md, foundations/14-metrics-and-diagnosis.md)
+- <https://create.roblox.com/docs/en-us/production/analytics/acquisition> (cited in kit/templates/stats-intake.md)
+- <https://create.roblox.com/docs/en-us/production/analytics/analytics-dashboard> (cited in foundations/02-the-platform.md, foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md and 1 more)
+- <https://create.roblox.com/docs/en-us/production/analytics/economy-events> (cited in foundations/14-metrics-and-diagnosis.md, kit/templates/stats-intake.md)
+- <https://create.roblox.com/docs/en-us/production/analytics/engagement> (cited in kit/stats-to-plan.md, kit/templates/stats-intake.md)
+- <https://create.roblox.com/docs/en-us/production/analytics/funnel-events> (cited in foundations/02-the-platform.md, foundations/08-retention.md, foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md and 1 more)
+- <https://create.roblox.com/docs/en-us/production/analytics/monetization> (cited in kit/templates/stats-intake.md)
+- <https://create.roblox.com/docs/en-us/production/analytics/performance> (cited in foundations/10-feel-and-feedback.md, foundations/14-metrics-and-diagnosis.md, kit/templates/stats-intake.md)
+- <https://create.roblox.com/docs/en-us/production/analytics/retention> (cited in foundations/02-the-platform.md, foundations/08-retention.md, foundations/14-metrics-and-diagnosis.md, kit/templates/stats-intake.md)
 - <https://create.roblox.com/docs/en-us/production/analytics/retention.md> (cited in foundations/03-idea-and-reference.md, foundations/13-live-ops.md, foundations/14-metrics-and-diagnosis.md)
+- <https://create.roblox.com/docs/en-us/production/configs> (cited in kit/stats-to-plan.md)
+- <https://create.roblox.com/docs/en-us/production/experiments> (cited in foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md)
 - <https://create.roblox.com/docs/en-us/production/game-design/analytics-essentials> (cited in foundations/14-metrics-and-diagnosis.md)
 - <https://create.roblox.com/docs/en-us/production/game-design/monetization-foundations> (cited in foundations/15-the-line.md)
 - <https://create.roblox.com/docs/en-us/production/game-design/onboarding-techniques> (cited in foundations/10-feel-and-feedback.md)
@@ -194,9 +200,13 @@ pages that cite each. Built by `python tools/build_index.py`. All were read in N
 - <https://create.roblox.com/docs/en-us/production/promotion/social-media-links> (cited in foundations/11-clips-and-packaging.md)
 - <https://create.roblox.com/docs/en-us/production/publishing/kids-and-select> (cited in foundations/02-the-platform.md, foundations/15-the-line.md)
 - <https://create.roblox.com/docs/en-us/production/publishing/publish-experiences-and-places> (cited in foundations/02-the-platform.md)
+- <https://create.roblox.com/docs/en-us/production/publishing/thumbnails> (cited in kit/stats-to-plan.md)
+- <https://create.roblox.com/docs/en-us/projects/cross-platform> (cited in kit/templates/screen-brief.md)
 - <https://create.roblox.com/docs/en-us/projects/teleport> (cited in foundations/02-the-platform.md)
 - <https://create.roblox.com/docs/en-us/reference/engine/classes/Players> (cited in foundations/09-other-players.md)
 - <https://create.roblox.com/docs/en-us/resources/feature-packages/engagement-rewards> (cited in foundations/08-retention.md)
+- <https://create.roblox.com/docs/en-us/ui/on-screen-containers> (cited in kit/templates/screen-brief.md)
+- <https://create.roblox.com/docs/en-us/ui/position-and-size> (cited in kit/templates/screen-brief.md)
 - <https://create.roblox.com/docs/en-us/workspace/streaming> (cited in foundations/02-the-platform.md)
 - <https://create.roblox.com/docs/performance-optimization/test-on-hardware> (cited in foundations/02-the-platform.md, foundations/14-metrics-and-diagnosis.md, slop/03-quality-bar.md)
 - <https://create.roblox.com/docs/production/analytics/acquisition> (cited in foundations/14-metrics-and-diagnosis.md)
@@ -225,12 +235,12 @@ pages that cite each. Built by `python tools/build_index.py`. All were read in N
 
 ## devforum.roblox.com (48)
 
-- <https://devforum.roblox.com/t/5-tips-from-roblox-staff-to-get-the-most-out-of-thumbnail-personalization/3471689> (cited in foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md)
+- <https://devforum.roblox.com/t/5-tips-from-roblox-staff-to-get-the-most-out-of-thumbnail-personalization/3471689> (cited in foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md)
 - <https://devforum.roblox.com/t/ads-for-creators-rdc-recap-and-what%E2%80%99s-next/3929106> (cited in foundations/03-idea-and-reference.md, foundations/11-clips-and-packaging.md)
-- <https://devforum.roblox.com/t/ads-manager-updates-acquire-new-users-continuous-campaigns-and-more/3862159> (cited in foundations/11-clips-and-packaging.md)
+- <https://devforum.roblox.com/t/ads-manager-updates-acquire-new-users-continuous-campaigns-and-more/3862159> (cited in foundations/11-clips-and-packaging.md, kit/stats-to-plan.md)
 - <https://devforum.roblox.com/t/ads-manager-updates-home-search-combined-new-benchmarks-and-sunsetting-the-classic-flow/4084863> (cited in foundations/11-clips-and-packaging.md)
 - <https://devforum.roblox.com/t/age-check-requirement-to-chat-now-live-globally/4226101> (cited in genres/hangout.md)
-- <https://devforum.roblox.com/t/automatic-translation-experiment-results-and-next-steps/3878129> (cited in foundations/11-clips-and-packaging.md)
+- <https://devforum.roblox.com/t/automatic-translation-experiment-results-and-next-steps/3878129> (cited in foundations/11-clips-and-packaging.md, kit/stats-to-plan.md)
 - <https://devforum.roblox.com/t/beta-new-feature-packages-season-pass-engagement-rewards/3579550> (cited in foundations/13-live-ops.md)
 - <https://devforum.roblox.com/t/boost-your-discovery-with-the-improved-recommended-for-you-algorithm-and-analytics-for-creators/3587441> (cited in foundations/09-other-players.md, foundations/13-live-ops.md)
 - <https://devforum.roblox.com/t/changes-to-roblox-plus-private-server-limits/4739922> (cited in foundations/09-other-players.md, foundations/12-monetization.md)
@@ -249,9 +259,9 @@ pages that cite each. Built by `python tools/build_index.py`. All were read in N
 - <https://devforum.roblox.com/t/jumping-in-roblox-studio-became-a-lot-more-difficult/2017588> (cited in foundations/10-feel-and-feedback.md)
 - <https://devforum.roblox.com/t/jumping-off-a-trusspart-is-affected-by-fps-and-avatar-type/3292004> (cited in foundations/10-feel-and-feedback.md, genres/obby.md)
 - <https://devforum.roblox.com/t/live-now-personalize-your-thumbnails-to-attract-more-users/3257233> (cited in foundations/14-metrics-and-diagnosis.md)
-- <https://devforum.roblox.com/t/managed-pricing-one-system-for-better-pricing-and-earnings-growth/4684738> (cited in foundations/12-monetization.md, foundations/14-metrics-and-diagnosis.md)
-- <https://devforum.roblox.com/t/my-day-1-retention-is-awful-23-losing-half-my-players-in-under-2-minutes-what-am-i-doing-wrong-with-onboarding/4186434> (cited in foundations/14-metrics-and-diagnosis.md)
-- <https://devforum.roblox.com/t/need-advice-on-my-games-ad-performance-and-next-steps/4760265> (cited in foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md)
+- <https://devforum.roblox.com/t/managed-pricing-one-system-for-better-pricing-and-earnings-growth/4684738> (cited in foundations/12-monetization.md, foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md)
+- <https://devforum.roblox.com/t/my-day-1-retention-is-awful-23-losing-half-my-players-in-under-2-minutes-what-am-i-doing-wrong-with-onboarding/4186434> (cited in foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md)
+- <https://devforum.roblox.com/t/need-advice-on-my-games-ad-performance-and-next-steps/4760265> (cited in foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md)
 - <https://devforum.roblox.com/t/new-advertising-policies-standards/4527365> (cited in foundations/11-clips-and-packaging.md, foundations/15-the-line.md)
 - <https://devforum.roblox.com/t/new-merch-booth-developer-module/1797914> (cited in genres/hangout.md)
 - <https://devforum.roblox.com/t/new-transaction-refunded-webhook-notifies-when-a-purchase-is-cancelled/4890339> (cited in foundations/12-monetization.md, foundations/15-the-line.md)
@@ -262,7 +272,7 @@ pages that cite each. Built by `python tools/build_index.py`. All were read in N
 - <https://devforum.roblox.com/t/roblox-kids-and-select-global-launch-upcoming-updates-to-eligibility-ads-manager-and-expedited-review/4685717> (cited in foundations/02-the-platform.md, foundations/15-the-line.md)
 - <https://devforum.roblox.com/t/roblox-kids-and-select-new-restrictions-on-reward-driven-media-feeds/4829188> (cited in foundations/02-the-platform.md, foundations/15-the-line.md, slop/05-after-the-peak.md, teardowns/steal-an-egg.md)
 - <https://devforum.roblox.com/t/running-successful-experiments-insights-from-top-creators/4549276> (cited in foundations/12-monetization.md, foundations/13-live-ops.md)
-- <https://devforum.roblox.com/t/sponsored-ads-traffic-degrades-the-engagement-metrics-used-for-discovery-causing-paid-acquisition-to-harm-organic-ranking/4838351> (cited in foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md)
+- <https://devforum.roblox.com/t/sponsored-ads-traffic-degrades-the-engagement-metrics-used-for-discovery-causing-paid-acquisition-to-harm-organic-ranking/4838351> (cited in foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md)
 - <https://devforum.roblox.com/t/sudden-drop-on-playtime-and-retention-with-update/3880064> (cited in foundations/13-live-ops.md, foundations/14-metrics-and-diagnosis.md)
 - <https://devforum.roblox.com/t/t/2979267/123> (cited in genres/hangout.md)
 - <https://devforum.roblox.com/t/test-graphics-and-memory-on-lower-end-devices-with-the-performance-simulator/4979313> (cited in foundations/02-the-platform.md, foundations/10-feel-and-feedback.md)
@@ -1248,7 +1258,7 @@ pages that cite each. Built by `python tools/build_index.py`. All were read in N
 ## sozai.app (2)
 
 - <https://sozai.app/transcript/game-accidentally-solved-roblox-algorithm/index.md> (cited in foundations/11-clips-and-packaging.md)
-- <https://sozai.app/transcript/roblox-sponsored-ads-explained/> (cited in foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md)
+- <https://sozai.app/transcript/roblox-sponsored-ads-explained/> (cited in foundations/11-clips-and-packaging.md, foundations/14-metrics-and-diagnosis.md, kit/stats-to-plan.md)
 
 ## techwiser.com (2)
 
@@ -1436,6 +1446,10 @@ pages that cite each. Built by `python tools/build_index.py`. All were read in N
 
 - <https://gdcvault.com/play/1023146/Math-for-Game-Programmers-Juicing> (cited in foundations/10-feel-and-feedback.md)
 
+## github.com (1)
+
+- <https://github.com/8bitgfx/drip> (cited in README.md, kit/templates/screen-brief.md)
+
 ## godotengine.org (1)
 
 - <https://godotengine.org/asset-library/asset/735> (cited in foundations/10-feel-and-feedback.md)
@@ -1587,6 +1601,10 @@ pages that cite each. Built by `python tools/build_index.py`. All were read in N
 ## studiokrew.com (1)
 
 - <https://studiokrew.com/blog/?p=2016> (cited in foundations/02-the-platform.md, foundations/12-monetization.md, foundations/13-live-ops.md)
+
+## support.google.com (1)
+
+- <https://support.google.com/accessibility/android/answer/7101858> (cited in kit/templates/screen-brief.md)
 
 ## techcrunch.com (1)
 

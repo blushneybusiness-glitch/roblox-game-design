@@ -16,6 +16,8 @@ The audit is strict on purpose. A design gets no credit for what it intends. If 
 
 If a document is missing, the gates that depend on it fail. Say which document is missing and stop scoring that part.
 
+For a live game, [templates/stats-intake.md](templates/stats-intake.md) lists every number in the right-hand column and where it is in the dashboard. When the question is "which number do I fix first", use [stats-to-plan.md](stats-to-plan.md) instead of the audit.
+
 ## Part A: gates
 
 Twelve checks. Each is pass or fail. One failed gate means the design is not ready, whatever the score says.
@@ -33,7 +35,7 @@ Twelve checks. Each is pass or fail. One failed gate means the design is not rea
 | G9 | The truth | Odds are shown and match the server, timers do not restart or lie, no purchase window opens by itself when the player loses something (a revive button the player chooses to press on a death screen is the accepted exception), and paid random items follow Roblox's rules | [15](../foundations/15-the-line.md) |
 | G10 | The phone | The loop works with one thumb, and the build holds 30 frames a second on a 3 GB Android phone with a full server. For a document: both are stated as requirements | [10](../foundations/10-feel-and-feedback.md) |
 | G11 | Three updates ready | Three weekly updates are planned, each with things to collect and one event moment | [13](../foundations/13-live-ops.md) |
-| G12 | The funnel is wired | A funnel event with a fixed step number exists for each row of the first-session script | [14](../foundations/14-metrics-and-diagnosis.md) |
+| G12 | The funnel is wired | A funnel event exists for each row of the first-session script, numbered in the order players do the steps | [14](../foundations/14-metrics-and-diagnosis.md) |
 
 ## Part B: score
 

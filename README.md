@@ -23,6 +23,8 @@ A few of the things inside, each with its source on the page it comes from:
 | Read the whole thing in two minutes | [foundations/00-the-short-version.md](foundations/00-the-short-version.md) |
 | Design a new game | [foundations/03-idea-and-reference.md](foundations/03-idea-and-reference.md), then your genre in [genres/](genres/README.md), then the templates in [kit/templates/](kit/templates/) |
 | Find out why players leave your game | [kit/design-audit.md](kit/design-audit.md) and [foundations/14-metrics-and-diagnosis.md](foundations/14-metrics-and-diagnosis.md) |
+| Turn your dashboard numbers into the next change | [kit/templates/stats-intake.md](kit/templates/stats-intake.md), then [kit/stats-to-plan.md](kit/stats-to-plan.md) |
+| Hand a screen to a UI designer or a design agent | [kit/templates/screen-brief.md](kit/templates/screen-brief.md) |
 | Make a trend game ("slop") that holds players | [slop/](slop/README.md) |
 | See how a specific hit works | [teardowns/](teardowns/README.md) |
 | Have an AI assistant do any of the above properly | [AGENTS.md](AGENTS.md) and [kit/prompts.md](kit/prompts.md) |
@@ -35,8 +37,8 @@ A few of the things inside, each with its source on the page it comes from:
 | [genres/](genres/README.md) | Twenty-five playbooks with the same sections in each: the loop with a stopwatch, the first five minutes, numbers that work, what brings players back, money, how games in the genre die, and a pass/fail checklist |
 | [slop/](slop/README.md) | Trend games in depth: the anatomy of a hit, eleven mechanisms that hold players, hit against dead clone, a ten-step recipe with starting numbers, and what happens after the peak |
 | [teardowns/](teardowns/README.md) | How individual hits work, in numbers: loop, ladder, odds, clocks, prices |
-| [kit/](kit/design-audit.md) | A design audit with twelve gates and a hundred-point score, a test that removes empty advice, templates for every design document, and prompts for AI assistants |
-| [tools/](tools/pacing.py) | `pacing.py` checks a price ladder's timing. `snapshot.py` and `analyze.py` re-pull and re-analyse Roblox's public chart data |
+| [kit/](kit/design-audit.md) | A design audit with twelve gates and a hundred-point score, a test that removes empty advice, a routine that turns a live game's numbers into one change that can be read, templates for every design document, and prompts for AI assistants |
+| [tools/](tools/pacing.py) | `pacing.py` checks a price ladder's timing. `funnel.py` reads your stats and says where players are lost. `snapshot.py` and `analyze.py` re-pull and re-analyse Roblox's public chart data |
 | [data/](data/README.md) | A snapshot of the charts from 25 November 2026: 2,408 games, 16,831 passes, 105,745 products and 12,718 badges as CSV, with an analysis |
 | [research/](research/README.md) | How this was researched, the sources, and what it could not find |
 
@@ -50,7 +52,7 @@ AI models are bad at game design in a specific way: they write a description tha
 git clone https://github.com/blushneybusiness-glitch/roblox-game-design ~/.claude/skills/roblox-game-design
 ```
 
-Then ask for what you want: "design a tower defense game", "audit my game", "why do players leave in the first minute?".
+Then ask for what you want: "design a tower defense game", "audit my game", "why do players leave in the first minute?", "here are my stats, what do I fix first?".
 
 **Codex, Cursor and other agents.** Clone the repository into your project, or next to it. These tools read `AGENTS.md` on their own.
 
@@ -82,6 +84,33 @@ Checks
 
 Describe your own ladder with [kit/templates/economy-sheet.md](kit/templates/economy-sheet.md).
 
+## The stats tool
+
+`tools/funnel.py` reads the numbers from your Creator Hub dashboard and says which stage to work on first, where in the first session players leave, how much of a gap comes from ad traffic or one device, and the smallest change your traffic can prove. It finds the place. [kit/stats-to-plan.md](kit/stats-to-plan.md) is the routine for finding the cause and choosing one fix.
+
+```
+python tools/funnel.py tools/examples/stats-example.json
+```
+
+```
+WORK ON THIS FIRST
+  Stage:  First session. Average session time is 5.1 min against a median of 9.0 min (your dashboard).
+  Where:  the largest drop-off, 'First purchase' to 'Second purchase', around 0:54 to 2:00:
+          1,210 players, 29% of everyone who joined.
+          the highest leave rate, 0:30 to 1:00.
+  Target: start with half the gap to the other steps:
+          the share of joiners who reach 'Second purchase' from 43.1% to 51.3%.
+          A 14-day split at your traffic can prove a rise of 3.0 points, so this can be read.
+
+WHAT YOUR TRAFFIC CAN PROVE
+  number                               now   14-day split   28-day split   60-day split  7 days each side
+  Reached 'Second purchase'          43.1%      +3.0 (7%)      +2.1 (5%)      +1.5 (3%)         +3.0 (7%)
+  Day 1 retention                     5.5%     +1.5 (27%)     +1.0 (19%)     +0.7 (13%)        +1.5 (27%)
+  Day 7 retention                     0.9%     +0.7 (75%)     +0.5 (51%)     +0.3 (33%)        +0.7 (75%)
+```
+
+The example's numbers are invented. Put your own in with [kit/templates/stats-intake.md](kit/templates/stats-intake.md). When the fix is a screen, [kit/templates/screen-brief.md](kit/templates/screen-brief.md) hands it to a UI designer or to a design agent such as [Drip](https://github.com/8bitgfx/drip).
+
 ## How to read the evidence
 
 | You see | It means |
@@ -103,6 +132,7 @@ Stated plainly, so you know where to trust it less:
 - **Peaks.** Trackers disagree, sometimes by a factor of two. Ranges are given where they do.
 - **Retention by genre.** Roblox does not publish it. The only retention figures are platform-wide medians from one analytics vendor.
 - **Session lengths.** Tracker estimates.
+- **The stats routine.** `kit/stats-to-plan.md` and `tools/funnel.py` are built from Roblox's documentation and standard sample-size arithmetic. They have not been run on a live game's dashboard yet, and their example is invented.
 
 If you can fill one of these from your own dashboard or your own stopwatch, see [CONTRIBUTING.md](CONTRIBUTING.md).
 

@@ -1,0 +1,50 @@
+{
+  "name": "Example with invented numbers: a collect-and-earn game three weeks after launch",
+  "dates": "7 full days, Monday to Sunday",
+  "days": 7,
+  "new_players_per_day": 600,
+
+  "first_session": {
+    "0.5": 0.91,
+    "1": 0.74,
+    "2": 0.52,
+    "3": 0.41,
+    "5": 0.30,
+    "10": 0.14
+  },
+  "first_session_previous": {
+    "1": 0.75,
+    "5": 0.31
+  },
+
+  "funnel": [
+    {"step": "Joined", "users": 4200, "minute": 0},
+    {"step": "First input", "users": 3990, "minute": 0.1},
+    {"step": "First reward", "users": 3650, "minute": 0.4},
+    {"step": "First purchase", "users": 3020, "minute": 0.9},
+    {"step": "Second purchase", "users": 1810, "minute": 2.0},
+    {"step": "Saw the long goal", "users": 1180, "minute": 5.0},
+    {"step": "First rebirth", "users": 250, "minute": 25}
+  ],
+  "first_milestone_share": 0.06,
+
+  "metrics": {
+    "play_through_rate": {"value": 0.071, "p50": 0.062, "p90": 0.11},
+    "session_minutes": {"value": 5.1, "p50": 9.0, "p90": 14.0},
+    "d1": {"value": 0.055, "p50": 0.105, "p90": 0.17},
+    "d7": {"value": 0.009, "p50": 0.018, "p90": 0.05},
+    "d30": {"value": null},
+    "conversion": {"value": 0.006, "p50": 0.011, "p90": 0.03}
+  },
+
+  "by_source": [
+    {"name": "Home recommendations", "share": 0.35, "at_5min": 0.36, "d1": 0.081},
+    {"name": "Sponsored ads", "share": 0.55, "paid": true, "at_5min": 0.24, "d1": 0.031},
+    {"name": "Search", "share": 0.10, "at_5min": 0.41, "d1": 0.094}
+  ],
+  "by_device": [
+    {"name": "Phone", "share": 0.72, "at_5min": 0.27, "d1": 0.050},
+    {"name": "Computer", "share": 0.22, "at_5min": 0.38, "d1": 0.070},
+    {"name": "Tablet and console", "share": 0.06, "at_5min": 0.34, "d1": 0.058}
+  ]
+}
