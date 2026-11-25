@@ -1,0 +1,120 @@
+{
+  "name": "Steal a Brainrot, conveyor ladder as documented in November 2026 (see teardowns/steal-a-brainrot.md)",
+  "start_cash": 25,
+  "slots": 10,
+  "sell_back": 0.5,
+  "income_multiplier": 1.14,
+  "first_action_s": 8,
+  "seconds_per_purchase": 3,
+  "gate_patience_s": 180,
+  "units": [
+    {
+      "name": "Noobini Pizzanini",
+      "price": 25,
+      "income": 1
+    },
+    {
+      "name": "Lirili Larila",
+      "price": 250,
+      "income": 3
+    },
+    {
+      "name": "Tim Cheese",
+      "price": 500,
+      "income": 5
+    },
+    {
+      "name": "Talpa Di Fero",
+      "price": 1000,
+      "income": 9
+    },
+    {
+      "name": "Pipi Kiwi",
+      "price": 1500,
+      "income": 13
+    },
+    {
+      "name": "Trippi Troppi",
+      "price": 2000,
+      "income": 15
+    },
+    {
+      "name": "Tric Trac Baraboom",
+      "price": 9000,
+      "income": 65
+    },
+    {
+      "name": "Cappuccino Assassino",
+      "price": 10000,
+      "income": 75
+    },
+    {
+      "name": "Burbaloni Loliloli",
+      "price": 35000,
+      "income": 200,
+      "every_s": 300
+    },
+    {
+      "name": "Wombo Rollo",
+      "price": 42500,
+      "income": 275
+    },
+    {
+      "name": "Sigma Boy",
+      "price": 325000,
+      "income": 1350,
+      "every_s": 300
+    },
+    {
+      "name": "Frigo Camelo",
+      "price": 350000,
+      "income": 2000,
+      "every_s": 900
+    },
+    {
+      "name": "Toiletto Focaccino",
+      "price": 4850000,
+      "income": 16000,
+      "every_s": 900
+    },
+    {
+      "name": "Tralalero Tralala",
+      "price": 10000000,
+      "income": 50000,
+      "every_s": 2700
+    },
+    {
+      "name": "Appelini",
+      "price": 69000000,
+      "income": 300000,
+      "every_s": 2700
+    },
+    {
+      "name": "La Vacca Saturno Saturnita",
+      "price": 80000000,
+      "income": 325000,
+      "every_s": 14400
+    }
+  ],
+  "gates": [
+    {
+      "name": "Rebirth 1 ($500K)",
+      "cash": 500000,
+      "requires": [
+        "Trippi Troppi"
+      ],
+      "consumes_required": true,
+      "cash_after": 5000,
+      "income_multiplier_after": 1.71
+    }
+  ],
+  "targets": {
+    "first_purchase_s": 15,
+    "max_gap_first_15min_s": 90,
+    "first_gate_minutes": [
+      20,
+      40
+    ],
+    "max_payback_s": 300
+  }
+}

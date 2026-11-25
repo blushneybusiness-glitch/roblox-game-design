@@ -1,0 +1,12 @@
+# Raw API responses; the CSVs in data/ are built from them
+data/raw/
+data/_snapshot_log.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# Scratch
+tools/examples/_tmp.json
+.DS_Store
+Thumbs.db

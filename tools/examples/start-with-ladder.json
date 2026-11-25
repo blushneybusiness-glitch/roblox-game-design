@@ -1,0 +1,112 @@
+{
+  "name": "Start-with ladder from slop/04-build-it.md",
+  "start_cash": 25,
+  "slots": 10,
+  "sell_back": 0.5,
+  "income_multiplier": 1.385,
+  "first_action_s": 8,
+  "seconds_per_purchase": 3,
+  "gate_patience_s": 180,
+  "units": [
+    {
+      "name": "1 Common",
+      "price": 25,
+      "income": 1
+    },
+    {
+      "name": "2 Common",
+      "price": 180,
+      "income": 3
+    },
+    {
+      "name": "3 Common",
+      "price": 480,
+      "income": 6
+    },
+    {
+      "name": "4 Common",
+      "price": 1140,
+      "income": 12
+    },
+    {
+      "name": "5 Rare",
+      "price": 2625,
+      "income": 25
+    },
+    {
+      "name": "6 Rare",
+      "price": 6900,
+      "income": 60
+    },
+    {
+      "name": "7 Epic",
+      "price": 18750,
+      "income": 150
+    },
+    {
+      "name": "8 Epic",
+      "price": 56000,
+      "income": 400
+    },
+    {
+      "name": "9 Legendary",
+      "price": 155000,
+      "income": 1000,
+      "every_s": 300
+    },
+    {
+      "name": "10 Legendary",
+      "price": 525000,
+      "income": 3000,
+      "every_s": 300
+    },
+    {
+      "name": "11 Mythic",
+      "price": 2000000,
+      "income": 10000,
+      "every_s": 900
+    },
+    {
+      "name": "12 Mythic",
+      "price": 9200000,
+      "income": 40000,
+      "every_s": 900
+    },
+    {
+      "name": "13 God",
+      "price": 39000000,
+      "income": 150000,
+      "every_s": 2700
+    },
+    {
+      "name": "14 God",
+      "price": 174000000,
+      "income": 600000,
+      "every_s": 2700
+    }
+  ],
+  "gates": [
+    {
+      "name": "Rebirth 1",
+      "cash": 2000000,
+      "requires": [
+        "5 Rare",
+        "6 Rare"
+      ],
+      "consumes_required": true,
+      "cash_after": 0,
+      "income_multiplier_after": 2.08,
+      "slots_add": 0
+    }
+  ],
+  "targets": {
+    "first_purchase_s": 15,
+    "max_gap_first_15min_s": 90,
+    "first_gate_minutes": [
+      20,
+      40
+    ],
+    "ladder_min_hours": 3,
+    "max_payback_s": 300
+  }
+}
